@@ -1,0 +1,8 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pyTelegramBotAPI>=4.16
+groq>=0.9
+requests>=2.31
+numpy>=1.26
+sentence-transformers>=2.5
+torch>=2.2

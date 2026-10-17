@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: bot-22
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_REPO
+        value: eo7w/BOT-22
+      - key: WEBHOOK_URL
+        sync: false
+      - key: EMBEDDINGS_ENABLED
+        value: "true"
